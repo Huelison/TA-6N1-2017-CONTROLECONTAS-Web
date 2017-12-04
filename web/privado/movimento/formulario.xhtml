@@ -46,7 +46,8 @@
                         <f:selectItems value="#{controleMovimento.daoPessoa.listaTodos}" 
                                        var="pes" itemLabel="#{pes.nome}"/>
                     </p:selectOneMenu>
-                    <p:outputLabel for="selectTpPagamento" value="Pessoa"/>
+                    
+                    <p:outputLabel for="selectTpPagamento" value="Tipo de Pagamento"/>
                     <p:selectOneMenu id="selectTpPagamento" value="#{controleMovimento.objeto.tipo}">
                         <f:selectItem noSelectionOption="true" itemLabel="Selecione um registro"/>
                         <f:selectItem itemValue="Pago" itemLabel="Pago"/>
