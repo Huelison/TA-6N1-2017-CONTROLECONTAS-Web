@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<persistence version="2.1" xmlns="http://xmlns.jcp.org/xml/ns/persistence" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/persistence http://xmlns.jcp.org/xml/ns/persistence/persistence_2_1.xsd">
+    <persistence-unit name="TA-6N1-2017-CONTROLECONTAS-WebPU" transaction-type="JTA">
+        <provider>org.hibernate.ejb.HibernatePersistence</provider>
+        <jta-data-source>jdbc/TA-6N1-2017-CONTROLECONTAS</jta-data-source>
+        <class>br.edu.ifsul.modelo.Movimento</class>
+        <class>br.edu.ifsul.modelo.Pagamento</class>
+        <class>br.edu.ifsul.modelo.Pessoa</class>
+        <properties>
+            <property name="hibernate.hbm2ddl.auto" value="update"/>
+            <property name="hibernate.dialect" value="org.hibernate.dialect.PostgreSQLDialect"/>
+            <property name="hibernate.transaction.jta.platform" 
+                      value="org.hibernate.service.jta.platform.internal.SunOneJtaPlatform"/>
+            <property name="hibernate.classloading.use_current_tccl_as_parent" value="false"/> 
+        </properties>
+    </persistence-unit>
+</persistence> 
+ 
